@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {display: none;}
+    </style>
+</head>
+<body>
+
+
+    <div id="div1">
+
+        <h1>Div 1</h1>
+        <button onclick="teste()">Clique aqui</button>
+        <table>
+
+            <tr>
+                <th>Nome</th>
+                <th>preço</th>
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+            </tr>
+           
+        <table>
+
+
+    </div>
+
+
+    <div id="div2" class="hidden">
+        <h1>AAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+    </div>
+
+    <script>
+
+        function teste() {
+            document.getElementById("div1").classList.add("hidden")
+            document.getElementById("div2").classList.remove("hidden")
+
+
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
