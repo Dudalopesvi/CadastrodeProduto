@@ -12,7 +12,7 @@ for (let i = 0; i < quantidademaxima; i++) {
         console.log("Quarto ocupado tente outro")
         i--
     } else {
-        let nome = prompt("Qual seu nome?")
+        let nome = prompt("Qual seu nomee?")
         let email = prompt("Qual o seu email?")
 
         let aluguel = {
