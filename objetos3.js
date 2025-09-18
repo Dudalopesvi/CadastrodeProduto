@@ -9,7 +9,7 @@ for (let i = 0; i < quantidademaxima; i++) {
 
     let quarto = prompt("Qual quarto você escolheu?")
     if (ocupado(quarto)) {
-        console.log("Quarto ocupado tente outro")
+        console.log("Quarto ocupado tente outroo")
         i--
     } else {
         let nome = prompt("Qual seu nomee?")
