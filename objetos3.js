@@ -9,10 +9,10 @@ for (let i = 0; i < quantidademaxima; i++) {
 
     let quarto = prompt("Qual quarto você escolheu?")
     if (ocupado(quarto)) {
-        console.log("Quarto ocupado tente outroo")
+        console.log("Quarto ocupado tente outro")
         i--
     } else {
-        let nome = prompt("Qual seu nomee?")
+        let nome = prompt("Qual seu nome?")
         let email = prompt("Qual o seu email?")
 
         let aluguel = {

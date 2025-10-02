@@ -1,18 +1,9 @@
-let nomes = []
-let precos = []
-let quantidades = []
-let valortotal = []
-
+let Produtos = []
 
 function Cadastro() {
 
-
     document.getElementById("tabela").classList.add("hidden")
     document.getElementById("Cadastro").classList.remove("hidden")
-
-
-
-
 
 }
 
@@ -24,33 +15,32 @@ function Salvar() {
 
     let quantidade = document.getElementById("quantidade")
 
-   
+   let produto = {
+    nome: nome.value,
+  preco: parseFloat(preco.value),
+    quantidades: parseInt(quantidade.value),
+    valortotal:parseFloat(preco.value) * parseInt(quantidade.value)
+  }
 
 
+ 
+    Produtos.push(produto);
 
-    nomes.push(nome.value)
-    precos.push(parseFloat(preco.value))
-
-    quantidades.push(parseFloat(quantidade.value))
-
-
-    let total = parseFloat(preco.value) * parseInt(quantidade.value)
-    valortotal.push(total)
 
     alert("Cadastro realizado com sucesso!")
     mostrarTabela()
-}
+}   
 
 function mostrarTabela() {
     let corpotabela = document.getElementById("corpo");
     corpotabela.innerHTML = ""
-    for (let i = 0; i < nomes.length; i++) {
+    for (let i = 0; i < Produtos.length; i++) {
         const linha = document.createElement("tr")
         linha.innerHTML = `
-                <th>${nomes[i]}</th>
-                <th>${precos[i]}</th>
-                <th>${quantidades[i]}</th>
-                <th>${valortotal[i]}</th> 
+                <th>${Produtos[i].nome}</th>
+                <th>${Produtos[i].preco}</th>
+                <th>${Produtos[i].quantidades}</th>
+                <th>${Produtos[i].valortotal}</th> 
                <th> <button onclick="excluir(${i})">excluir</button></th> 
                 `
         corpotabela.appendChild(linha)
@@ -62,10 +52,8 @@ function mostrarTabela() {
 function excluir(i){
 
    
-    nomes.splice(i,1)
-    precos.splice(i,1)
-    quantidades.splice(i,1)
-    valortotal.splice(i,1)
+    Produtos.splice(i,1)
+  
 
     mostrarTabela()
 }
